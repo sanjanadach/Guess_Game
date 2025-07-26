@@ -50,7 +50,7 @@ Edit
  
  ┗ 📄 README.md         # This file
  
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 
 Thanks to the Streamlit team for making web app development in Python super easy and fun!
 
