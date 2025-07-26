@@ -38,22 +38,6 @@ Python 3.7+
 
 streamlit library
 
-## 📦 Installation
-bash
-
-Copy
-
-Edit
-
-pip install streamlit
-
-▶️ Run the App
-bash
-
-Copy
-
-Edit
-
 streamlit run app.py
 
 ## 📁 File Structure
