@@ -1,29 +1,69 @@
-import streamlit as st
-import random
+## 🎯 Number Guessing Game (Streamlit)
+This is a simple and interactive web app built using Streamlit where users try to guess a randomly generated number between 1 and 100. Great for learning how to use st.session_state to maintain state in Streamlit apps!
 
-st.title("🎯 Number Guessing Game")
-st.write("Guess a number between 1 and 100!")
+## 🚀 Features
+Random number is generated on each game start.
 
-# Initialize session state
-if "number" not in st.session_state:
-    st.session_state.number = random.randint(1, 100)
-if "guessed" not in st.session_state:
-    st.session_state.guessed = False
+User receives feedback whether their guess is too low, too high, or correct.
 
-# Input for user guess
-guess = st.number_input("Enter your guess:", min_value=1, max_value=100, step=1)
+Upon a correct guess, a "Play Again" button appears to restart the game.
 
-if st.button("Guess"):
-    if guess == st.session_state.number:
-        st.success(f"🎉 Correct! The number was {st.session_state.number}")
-        st.session_state.guessed = True
-    elif guess < st.session_state.number:
-        st.warning("Too low! Try again.")
-    else:
-        st.warning("Too high! Try again.")
+Uses st.session_state to preserve game state between interactions.
 
-if st.session_state.guessed:
-    if st.button("Play Again"):
-        st.session_state.number = random.randint(1, 100)
-        st.session_state.guessed = False
-        st.experimental_rerun()
+
+## 🧩 How It Works
+A random number between 1 and 100 is generated and stored in the session state.
+
+The user inputs a number and clicks "Guess".
+
+The app gives a hint:
+
+🎯 Correct
+
+🔽 Too low
+
+🔼 Too high
+
+After a correct guess, users can restart the game by clicking "Play Again".
+
+## 🛠️ Installation & Running the App
+
+🔧 Prerequisites
+Python 3.7+
+
+streamlit library
+
+## 📦 Installation
+bash
+
+Copy
+
+Edit
+
+pip install streamlit
+
+▶️ Run the App
+bash
+
+Copy
+
+Edit
+
+streamlit run app.py
+
+## 📁 File Structure
+text
+Copy
+Edit
+📦number-guessing-game
+
+ ┣ 📄 app.py            # Streamlit main application file
+ 
+ ┗ 📄 README.md         # This file
+ 
+🙌 Acknowledgements
+
+Thanks to the Streamlit team for making web app development in Python super easy and fun!
+
+
+
